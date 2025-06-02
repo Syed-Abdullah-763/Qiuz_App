@@ -115,3 +115,75 @@ function resultCalculator () {
 
   window.location.replace("../result/result.html")
 }
+
+
+
+// let min = quizQuestions.length;
+let min = 1;
+let sec = 0;
+let m_sec = 0;
+const minHeading = document.querySelector("#minHeading") 
+const secHeading = document.querySelector("#secHeading") 
+const m_secHeading = document.querySelector("#m_secHeading") 
+function timer() {
+  if (min === 0 && sec === 0 && m_sec === 0) {
+    stopTimer();
+    window.location.replace("../result/result.html")
+    return;
+  }
+
+  m_sec--;
+
+  if (m_sec < 0) {
+    if (sec > 0) {
+      m_sec = 100;
+    } else {
+      m_sec = 0;
+    }
+
+    sec--;
+  }
+
+  if (sec < 0) {
+    if (min > 0) {
+      sec = 60;
+    } else {
+      sec = 0;
+    }
+
+    min--;
+
+    if (min < 0) {
+      min = 0;
+      sec = 0;
+      m_sec = 0;
+      stopTimer();
+    }
+  }
+
+  if (secHeading.innerHTML < 9 && secHeading.innerHTML >= 0) {
+    secHeading.innerHTML = `0${sec}`;
+  } else {
+    secHeading.innerHTML = sec;
+  }
+
+  if (minHeading.innerHTML < 9 && minHeading.innerHTML >= 0) {
+    minHeading.innerHTML = `0${min}`;
+  } else {
+    minHeading.innerHTML = min;
+  }
+
+  if (m_secHeading.innerHTML < 9 && m_secHeading.innerHTML >= 0) {
+    m_secHeading.innerHTML = `0${m_sec}`;
+  } else {
+    m_secHeading.innerHTML = m_sec;
+  }
+}
+
+let interval;
+function startTimer() {
+  interval = setInterval(timer, 10);
+}
+function stopTimer() {
+  clearInterval(interval);
+}

@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="quiz.css" />
   </head>
 
-  <body onload="renderUi()">
+  <body onload="renderUi(); startTimer()">
     <div class="container">
       <header>
         <div id="userInfo">
         </div>
 
         <div class="timer">
-          <h1>Timer: 5:00</h1>
+          <h1>Timer: <span id="minHeading"></span> <span id="secHeading"></span> <span id="m_secHeading"></span></h1>
         </div>
       </header>
 
