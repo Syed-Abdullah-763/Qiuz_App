@@ -118,8 +118,7 @@ function resultCalculator () {
 
 
 
-// let min = quizQuestions.length;
-let min = 1;
+let min = quizQuestions.length;
 let sec = 0;
 let m_sec = 0;
 const minHeading = document.querySelector("#minHeading") 
