@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #242729;
+  color: #d4d5d6;
+}
+
+header {
+  height: 25%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d4d5d6;
+    border-right: none;
+}
+
+header div h3 {
+  margin-bottom: 15px;
+}
+
+main {
+  height: 55%;
+    width: 90%;
+}
+
+.mcqs {
+  height: 100%;
+  width: 100%;
+  padding: 10px 25px;
+}
+.mcqs .buttons {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mcqs button {
+  height: 45px;
+  width: 30%;
+  margin: 20px 10px;
+  border-radius: 15px;
+  background-color: #0d4780;
+  color: #d4d5d6;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #07529d;
+  }
+}
+
+.question {
+  height: 85%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  header h3 {
+    font-size: 16px;
+  }
+  .mcqs button {
+  width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header h3 {
+    font-size: 14px;
+  }
+  .mcqs button {
+  height: 45px;
+  width: 100%;
+  }
+}

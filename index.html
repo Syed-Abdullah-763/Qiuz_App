@@ -3,36 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>LogIn</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="container">
-      <header>
-        <div>
-          <h3>Name: Syed Abdullah</h3>
-          <h3>Email: syedabdullah@gmail.com</h3>
-          <h3>Quiz: HTML</h3>
-        </div>
+    <main>
+      <h1>LogIn</h1>
 
-        <div class="timer">
-          <h1>Timer: 5:00</h1>
-        </div>
-      </header>
-
-      <main>
-        <div class="mcqs" id="questionContainer">
-          <div class="buttons">
-            <button onclick="selection('html')">Start HTML Quiz</button>
-            <button onclick="selection('css')">Start CSS Quiz</button>
-            <button onclick="selection('javascript')">
-              Start JavaScript Quiz
-            </button>
-          </div>
-        </div>
-      </main>
-    </div>
+      <div class="form">
+        <span id="error"></span>
+        <input type="text" placeholder="Enter Your Name" id="name"/>
+        <input type="text" placeholder="Enter Your Email" id="email"/>
+        <button onclick="login()">LogIn</button>
+      </div>
+    </main>
 
     <script src="app.js"></script>
   </body>
