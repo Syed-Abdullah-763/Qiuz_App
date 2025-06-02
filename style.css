@@ -28,7 +28,7 @@ h1 {
 
 .form {
     height: 300px;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     padding-top: 30px;
@@ -61,5 +61,12 @@ h1 {
 
     &:hover {
         background-color: #064e96;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .form {
+        width: 80%;
     }
 }
